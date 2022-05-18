@@ -1,101 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Into section</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
 </head>
-<style>
-    ul,li{
-        list-style-type: none;
-    }
-    #menu1,#menu2{
-        display: none;
-    }
-    #menu2.active,#menu1.active{
-        display: block;
 
-    }
-    i{
-        padding-left:.3rem;
 
-    }
-    #angle-down,#angle-down2{
-      
-
-    }
-    #angle-down.active,#angle-down2.active{
-        transform: rotate(-180deg);
-    }
-    
-    
-    
-</style>
 <body>
     <div class="header">
         <div class="logo"> Snap </div>
         <div class="navbar">
-            <ul class="navbar-list">
-                    <li class="navbar-list-items">
-                        <div id="features">Features<i id="angle-down"class="fa-solid fa-angle-down"></i>
-                            <div id="collapse-navbar">
-                                <ul id="menu1">
-                                <li>Todo List</li>
-                                <li>Calender</li>
-                                <li>Reminder</li>
-                                <li>Planning</li>
+            <ul class="navbar-list"id="navbar-list">
+                <li class="navbar-list-items">
+                    <div id="features">Features<i id="angle-down" class="fa-solid fa-angle-down"></i>
+                        <div id="collapse-navbar">
+                            <ul id="menu1">
+                                <li><img src="images/icon-todo.svg" alt="" > TodoList</li>
+                                <li><img src="images/icon-calendar.svg" alt="" > Calender</li>
+                                <li><img src="images/icon-reminders.svg" alt="" > Reminder</li>
+                                <li><img src="images/icon-planning.svg" alt="" > Planning</li>
 
-                               </ul>
-                            </div>
+                            </ul>
                         </div>
-                    </li>
-                    <li><div id="company">Company<i id="angle-down2" class="fa-solid fa-angle-down"></i>
+                    </div>
+                </li>
+                <li>
+                    <div id="company">Company<i id="angle-down2" class="fa-solid fa-angle-down"></i>
                         <div id="collapse-navbar2">
                             <ul id="menu2">
-                            <li>History</li>
-                            <li>Our Team</li>
-                            <li>Blog</li>
-                           
+                                <li>History</li>
+                                <li>Our Team</li>
+                                <li>Blog</li>
 
-                           </ul>
+
+                            </ul>
                         </div>
-                    </div></li>
+                    </div>
+                </li>
 
-                        </select></li>
-                    <li class="navbar-list-items">Careers</li>
-                    <li class="navbar-list-items">About</li>
+                </select></li>
+                <li class="navbar-list-items">Careers</li>
+                <li class="navbar-list-items">About</li>
+                
+                
             </ul>
+            <div class="signup" id="signup">
+                <li class="navbar log-in">Login</li>
+                <li class="navbar register"><button type="submit">Register</button></li>
+            </div>
+            
+            <div class="hamburger-section">
+                <img id="menu-btn" src="images/icon-menu.svg"/>
+                <img  id="close-menu-btn" src="images/icon-close-menu.svg"/>
+            </div>
 
         </div>
-        <li class="navbar log-in">Login</li>
-        <li class="navbar register"><button type="submit">Register</button>
+        
+    </div>
+    <div class="main">
+        <div class="hero-img-section">
+            <img id="desktop-hero-img"src="images/image-hero-desktop.png"/>
+            <img  id="mobile-hero-img" src="images/image-hero-mobile.png"/>
+
+        </div>
+        <div class="hero-text">
+            <h1>Make remote work</h1>
+
+
+            <p> Get your team in sync, no matter your location. Streamline
+                processes, create team rituals, and watch productivity soar.
+
+            </p>
+
+                <button id="learn" type="submit">Learn more</button>
+                <div class="bottom-img">
+                   <img src="images/client-databiz.svg" alt="">
+                   <img src="images/client-audiophile.svg" alt="">
+        
+                   <img src="images/client-meet.svg" alt="">
+                   <img src="images/client-maker.svg" alt="">
+                </div>
+        
+        </div>
+        
     </div>
     <script>
-        let x=document.getElementById("features"),
-            y=document.getElementById("company"),
-            angleDown=document.getElementById("angle-down"),
-            icon2=document.getElementById("angle-down2"),
-            menu1=document.getElementById("menu1"),
-            menu2=document.getElementById("menu2");
+        let x = document.getElementById("features"),
+            y = document.getElementById("company"),
+            angleDown = document.getElementById("angle-down"),
+            icon2 = document.getElementById("angle-down2"),
+            menu1 = document.getElementById("menu1"),
+            menu2 = document.getElementById("menu2"),
+            menuBtn=document.getElementById("menu-btn"),
+            navbarList=document.getElementById("navbar-list")
+            signUp=document.getElementById("signup")
+            closeMenuBtn=document.getElementById("close-menu-btn");
 
-            y.addEventListener("click",()=>{
-                console.log("y is clicked")
-                icon2.classList.toggle("active")
-                menu2.classList.toggle("active")
-                
+        menuBtn.addEventListener("click",()=>{
+            // alert("hamburger clicked")
+          
+          closeMenuBtn.classList.add("active")
+          menuBtn.classList.add("active")
+          navbarList.classList.add("active")
+          signUp.classList.add("active")
+          
+          closeMenuBtn.addEventListener("click",()=>{
+              menuBtn.classList.remove("active")
+              closeMenuBtn.classList.remove("active")
+              navbarList.classList.remove("active")
+              signUp.classList.remove("active")
+          })
+    
+        })
+        
+        y.addEventListener("click", () => {
+            // console.log("y is clicked")
+            icon2.classList.toggle("active")
+            menu2.classList.toggle("active")
 
 
-            })
-            x.addEventListener("click",()=>{
-                console.log("x is clicked")
-               
-                angleDown.classList.toggle("active")
-                menu1.classList.toggle("active")
-                
-            })
 
+        })
+        x.addEventListener("click", () => {
+            // console.log("x is clicked")
+
+            angleDown.classList.toggle("active")
+            menu1.classList.toggle("active")
+
+        })
     </script>
 </body>
+
 </html>
