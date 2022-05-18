@@ -134,9 +134,9 @@ button[id]{
 
 /* mobile */
 @media only screen and (max-width:500px) {
-    body{
-        overflow-y: scroll;
-    }
+   body{
+       overflow-y:scroll
+   }
     .navbar{
         gap:2rem; 
         flex-direction: column; 
@@ -150,15 +150,13 @@ button[id]{
     .navbar-list,.signup,#menu{
         flex-direction:column;
         margin-left: 20rem;
+        display: none;
         width: 25rem;
-        
-        
     }
     .navbar-list.active{
         padding:4rem 0rem;
         position: absolute;
         margin-top: -1.5rem;
-       
         display: flex;
         margin-left: 3.5rem;
         height: 10rem;
