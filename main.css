@@ -152,14 +152,11 @@ button[id]{
         margin-left: 20rem;
         display: none;
         width: 25rem;
-        
-        
     }
     .navbar-list.active{
         padding:4rem 0rem;
         position: absolute;
         margin-top: -1.5rem;
-       
         display: flex;
         margin-left: 3.5rem;
         height: 10rem;
