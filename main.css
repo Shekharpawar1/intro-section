@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+body{
+    /* overflow: hidden; */
+    font-family: 'Epilogue', sans-serif;
+
+}
+.header{
+    padding:2rem;
+    display: flex;
+    gap:2rem;
+}.features{
+    display: flex;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.navbar{
+    display: flex;
+    gap:30rem;
+    padding:.2rem;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+ul,li{
+    display: flex;
+    
+}
+.navbar-list,.navbar-list-items{
+    display: flex;
+    gap:5rem;
+}
+.signup{
+    display: flex;
+    align-self: flex-start;
+    gap:2rem;
+}
+.hamburger-section{
+    display: none;;
+}
+button[type="submit"]{
+    background:none;
+    outline:none;
+    padding:1rem;
+    height: 4rem;
+    font-size: 1.3rem;
+    margin-top: -1rem;
+    border-radius:1rem
+}
+ 
+    ul,
+    li {
+        list-style-type: none;
+    }
+
+    #menu1,
+    #menu2 {
+        display: none;
+    } 
+
+    #menu2.active,
+    #menu1.active {
+        display: block;
+        
+        margin-top: 2rem;
+        height: 14rem;
+    }
+    /* #menu1,#menu2{
+        display: flex;
+        flex-direction: column;
+        
+
+    } */
+    #menu1>li,#menu2>li{
+        padding:1rem;
+
+
+    }
+    #menu1>*,#menu2>*{
+        /* padding:.7rem 2rem */
+    }
+    #menu1>ul{
+        width: 12rem;
+        display: flex;
+        flex-direction: column;
+    }
+    #menu1>li>img{
+        padding:0rem .5rem;
+    }
+
+    i{
+        position: absolute;
+        padding-left:.7rem;
+    }
+
+    
+    #angle-down.active,
+    #angle-down2.active {
+        transform: rotate(-180deg);
+        padding-left:1rem;
+    }
+.main{
+    margin-top: 4   rem;
+    display: flex;
+    flex-direction: row;
+}.hero-img-section{
+    order:2
+}
+.hero-img-section>img{
+  width: 45vw;
+    height: 70vh;
+    padding:0rem 5rem;
+    margin: 0rem 15rem 0rem 0rem;
+}
+.hero-text{
+    order:1;
+    margin-right:5rem;
+    padding:0rem 3rem;
+    width: 55vw;
+
+}
+h1{
+    margin-left: 5rem;
+    
+    font-size: 3rem;
+    font-weight: 700;
+    padding:0rem 8rem;
+}
+p{
+    margin-top: 5rem;
+    padding:0rem 5rem;
+}
+button[id]{
+    margin-left: 5rem;
+    margin-top: 5rem;
+}
+    
+
+    @media screen {
+        
+    }
