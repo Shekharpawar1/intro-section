@@ -155,9 +155,10 @@ button[id]{
         
     }
     .navbar-list.active{
-        padding: 2rem 0rem;
+        padding:4rem 0rem;
         position: absolute;
-        margin-top: 3.8rem;
+        margin-top: -1.5rem;
+       
         display: flex;
         margin-left: 3.5rem;
         height: 10rem;
@@ -167,9 +168,9 @@ button[id]{
         
     }
     .signup.active{
-        padding: 2rem 0rem;
+        padding: 3rem 0rem;
         position: absolute;
-        margin-top: 3.8rem;
+        margin-top: -1rem;
         display: flex;
         margin-left: 3.5rem;
         height: 10rem;
@@ -177,6 +178,7 @@ button[id]{
         padding-left:2rem;
 
     }
+    button
     #menu1{
         position: absolute;
         top:-2rem;
@@ -194,13 +196,15 @@ button[id]{
     }
     .signup{
         top:25rem;
+        padding:2rem 0rem;
+        font-weight: 500;
     }
     
     .main{
         flex-direction: column;
     }
     button[type="submit"]{
-            margin-left:-2rem;
+            margin-left:-1rem;
     }
     #menu-btn,#close-menu-btn.active{
         display: block;
