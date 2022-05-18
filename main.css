@@ -117,6 +117,9 @@ button[id]{
 .hero-img-section{
     order:2;
 }
+#mobile-hero-img{
+    display: none;
+}
 .hero-img-section>*{
    margin: 1rem 8rem 2rem 5rem;
    height: 72vh;
@@ -127,4 +130,135 @@ button[id]{
     display: flex;
     gap:3rem;
     margin-top: 2rem;
+}
+
+/* mobile */
+@media only screen and (max-width:500px) {
+    body{
+        overflow-y: scroll;
+    }
+    .navbar{
+        gap:2rem; 
+        flex-direction: column; 
+     
+        height: 10rem;
+    }
+    .navbar-list{
+        gap: 5rem;
+        height: 10rem;
+    }
+    .navbar-list,.signup,#menu{
+        flex-direction:column;
+        margin-left: 20rem;
+        width: 25rem;
+        
+        
+    }
+    .navbar-list.active{
+        padding: 2rem 0rem;
+        position: absolute;
+        margin-top: 3.8rem;
+        display: flex;
+        margin-left: 3.5rem;
+        height: 10rem;
+        background-color: white;
+        padding-left:2rem;
+        height: 23rem;
+        
+    }
+    .signup.active{
+        padding: 2rem 0rem;
+        position: absolute;
+        margin-top: 3.8rem;
+        display: flex;
+        margin-left: 3.5rem;
+        height: 10rem;
+        background-color: white;
+        padding-left:2rem;
+
+    }
+    #menu1{
+        position: absolute;
+        top:-2rem;
+        left:-8rem;
+        
+    }
+    #menu2{
+        position: absolute;
+        top:5rem;
+        left:-8rem;
+        
+    }
+    #menu1>li,#menu2>li{
+        color:black;
+    }
+    .signup{
+        top:25rem;
+    }
+    
+    .main{
+        flex-direction: column;
+    }
+    button[type="submit"]{
+            margin-left:-2rem;
+    }
+    #menu-btn,#close-menu-btn.active{
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        
+        
+        
+    }
+    #mobile-hero-img{
+        display: block;
+        height: 80vh;
+        width: 85vw;
+        
+        order:1;
+        padding: 0;
+        margin: 0;
+        margin:0rem 2rem;
+    }
+    #desktop-hero-img{
+        display: none;
+    }
+    .hero-text{
+        order:2;
+        text-align: center;
+        margin: 0;padding: 0;
+
+    }
+    h1{
+     padding:1rem 0rem;
+     margin: 1rem 0rem;
+    }
+    p{
+        padding: 1rem 2rem;
+    }
+    
+    #close-menu-btn{
+        display: none;
+    }
+    #menu-btn.active{
+        display: none;
+    }
+
+  
+    button[id]{
+        color:white;
+        background-color: black;
+        margin: 0 auto;
+    }
+    .bottom-img>img{
+        margin: 0;width: 4rem;
+
+    }
+    .bottom-img{
+    margin: 2rem 0rem ;padding: 0rem 1rem;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
 }
